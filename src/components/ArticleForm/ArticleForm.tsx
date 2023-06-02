@@ -45,6 +45,7 @@ export const ArticleForm: React.FC<Props> = ({ setActive }) => {
 
     addArticle({
       ...article,
+      isUserCreated: true,
       slug: article.title + article.author,
     });
 

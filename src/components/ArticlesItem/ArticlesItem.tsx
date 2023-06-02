@@ -1,6 +1,8 @@
 import React from 'react';
 import { Article } from '../../types/article';
 import noImage from '../../images/no-image.png';
+import { useArticlesActions } from '../../features/article/hooks';
+import closeIcon from '../../images/close.png';
 import './ArticlesItem.scss';
 
 type Props = {
@@ -8,7 +10,9 @@ type Props = {
 };
 
 export const ArticlesItem: React.FC<Props> = ({ article }) => {
-  const { slug, urlToImage, title, description, author } = article;
+  const { slug, urlToImage, title, description, author, isUserCreated } =
+    article;
+  const { removeArticle } = useArticlesActions();
 
   const image = urlToImage ? urlToImage : noImage;
 
@@ -23,6 +27,11 @@ export const ArticlesItem: React.FC<Props> = ({ article }) => {
         <p className="card__author">
           Author: {author ? author : <span>No author</span>}
         </p>
+        {isUserCreated && (
+          <button className='card__close-btn' onClick={() => removeArticle(slug)}>
+            <img src={closeIcon} alt="close icon" height="20px" />
+          </button>
+        )}
       </div>
     </div>
   );

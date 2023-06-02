@@ -4,5 +4,5 @@ export interface Article {
   description: string;
   title: string;
   isUserCreated?: boolean;
-  slug?: string;
+  slug: string;
 }

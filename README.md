@@ -1,9 +1,14 @@
-# React TypeScript Starter Pack
+# Project: News Portal
 
-To use this template click `Use this template`
+## Demo
 
-### Available Scripts
+You can watch a demo video of the project [here](https://borys-andrew.github.io/test_VRB/).
 
-`Deploy` - available to deploy your application to gh-pages
+## Description
+This project is a news portal application where you can search for news from the News API (https://newsapi.org/). The user can also create news.
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+## Installation
+- Clone the repository from GitHub.
+- Navigate to the project directory.
+- Install the required dependencies.
+- Run the application locally.
